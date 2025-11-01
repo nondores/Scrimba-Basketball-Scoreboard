@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Use min-height for flexibility */
 }
 
 .scoreboard {
@@ -19,6 +19,7 @@ body {
   max-width: 1100px;
   background-color: #2e2b59;
   padding: 20px;
+  gap: 15px; /* Add gap for spacing */
 }
 
 /* TEAM Sections */
@@ -117,6 +118,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  align-self: stretch; /* Make it stretch full height */
 }
 
 .period h3, .timer h3 {
@@ -132,6 +134,7 @@ button:hover {
 
 .timer {
   text-align: center;
+  width: 100%;
 }
 
 #timer-display {
@@ -177,22 +180,94 @@ button:hover {
   transform: scale(1);
 }
 
+/* --- ADDED THIS SECTION --- */
+/* Style for the new game button */
+#new-game {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: #ff4040;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 410px; /* Match timer controls width */
+  box-sizing: border-box; /* Include padding in width */
+  margin-top: 10px;
+}
+
+#new-game:hover {
+  background-color: #d43030;
+}
 
 
-/* RESPONSIVE DESIGN */
+/* --- REPLACED RESPONSIVE SECTION --- */
 @media (max-width: 768px) {
+  body {
+    height: auto; /* Allow scrolling */
+    padding: 20px 0;
+  }
+
   .scoreboard {
     flex-direction: column;
     align-items: center;
+    width: 95%;
+    gap: 25px;
   }
 
-  .team {
-    margin-bottom: 25px;
+  .team, .center {
+    width: 100%;
+  }
+
+  /* Re-order the blocks for a logical mobile layout */
+  .team.home {
+    order: 1; 
+  }
+  .team.guest {
+    order: 2; /* Move Guest team up */
+  }
+  .center {
+    order: 3; /* Move Center controls to the bottom */
+    margin-top: 10px;
+    gap: 25px;
   }
 
   .score-display {
-    width: 140px;
-    height: 80px;
-    font-size: 3.5rem;
+    width: 180px; /* Can be larger on mobile */
+    height: 100px;
+    font-size: 4.5rem;
+  }
+  
+  .buttons {
+     gap: 12px;
+  }
+  
+  .buttons button {
+      padding: 10px 18px; /* Bigger tap targets */
+      font-size: 1.1rem;
+  }
+  
+  .fouls-box {
+      width: 160px;
+      padding: 12px 0;
+  }
+
+  .timer-buttons {
+    flex-wrap: wrap; /* Allow timer buttons to wrap */
+    width: 100%;
+  }
+  
+  .timer-buttons button {
+     width: auto; /* Remove fixed width */
+     flex: 1 1 100px; /* Allow buttons to grow and shrink */
+     padding: 10px;
+  }
+
+  #new-game {
+    width: 100%;
+    max-width: none; /* Full width on mobile */
   }
 }
