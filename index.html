@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Score Board</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="scoreboard">
+      <!-- HOME -->
+      <div class="team home">
+        <h3>HOME</h3>
+        <div class="score-display" id="home-score">0</div>
+
+        <div class="buttons">
+          <button id="home-add-1">+1</button>
+          <button id="home-add-2">+2</button>
+          <button id="home-add-3">+3</button>
+        </div>
+
+        <div class="fouls-box">
+          <h4>FOULS</h4>
+          <div class="foul-display">
+            <span id="home-fouls">0</span>
+            <button id="home-foul-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <div class="center">
+        <div class="period">
+          <h3>PERIOD</h3>
+          <div id="period-number">0</div>
+          <button id="period-increase">+</button>
+        </div>
+
+        <div class="timer">
+          <h3>TIMER</h3>
+          <div id="timer-display">10:00</div>
+          <div class="timer-buttons">
+            <button id="start-timer">&#9654;&#65039;</button>
+            <button id="pause-timer">&#x23F8;</button>
+            <button id="reset-timer">&#128257;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GUEST -->
+      <div class="team guest">
+        <h3>GUEST</h3>
+        <div class="score-display" id="guest-score">0</div>
+
+        <div class="buttons">
+          <button id="guest-add-1">+1</button>
+          <button id="guest-add-2">+2</button>
+          <button id="guest-add-3">+3</button>
+        </div>
+
+        <div class="fouls-box">
+          <h4>FOULS</h4>
+          <div class="foul-display">
+            <span id="guest-fouls">0</span>
+            <button id="guest-foul-add">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
