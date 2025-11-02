@@ -180,7 +180,6 @@ button:hover {
   transform: scale(1);
 }
 
-/* --- ADDED THIS SECTION --- */
 /* Style for the new game button */
 #new-game {
   font-family: inherit;
@@ -204,7 +203,7 @@ button:hover {
 }
 
 
-/* --- REPLACED RESPONSIVE SECTION --- */
+/* --- RESPONSIVE SECTION --- */
 @media (max-width: 768px) {
   body {
     height: auto; /* Allow scrolling */
@@ -222,7 +221,7 @@ button:hover {
     width: 100%;
   }
 
-  /* Re-order the blocks for a logical mobile layout */
+  /* Order the blocks for a logical mobile layout */
   .team.home {
     order: 1; 
   }
