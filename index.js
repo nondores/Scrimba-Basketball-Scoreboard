@@ -22,7 +22,6 @@ const timerDisplay = document.getElementById("timer-display");
 const newGameBtn = document.getElementById("new-game");
 
 // --- Functions ---
-// Update scoreboard display
 function updateDisplay() {
   homeScoreEl.textContent = homeScore;
   guestScoreEl.textContent = guestScore;
@@ -57,7 +56,7 @@ function formatTime(seconds) {
   return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
-// Update timer display
+// Timer display
 function updateTimerDisplay() {
   timerDisplay.textContent = formatTime(totalSeconds);
 }
