@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Use min-height for flexibility */
+  min-height: 100vh;
 }
 
 .scoreboard {
@@ -19,7 +19,7 @@ body {
   max-width: 1100px;
   background-color: #2e2b59;
   padding: 20px;
-  gap: 15px; /* Add gap for spacing */
+  gap: 15px;
 }
 
 /* TEAM Sections */
@@ -41,6 +41,7 @@ h3 {
 .score-display {
   background-color: #111;
   color: #ff4040;
+  font-family: 'Cursed Timer ULiL', sans-serif;                                              
   font-size: 5rem;
   font-weight: 700;
   width: 180px;
@@ -91,6 +92,7 @@ button:hover {
 }
 
 .foul-display {
+  font-family: 'Cursed Timer ULiL', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +120,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  align-self: stretch; /* Make it stretch full height */
+  align-self: stretch;
 }
 
 .period h3, .timer h3 {
@@ -127,6 +129,7 @@ button:hover {
 }
 
 #period-number {
+  font-family: 'Cursed Timer ULiL', sans-serif;
   font-size: 2rem;
   color: #ffcc00;
   margin-bottom: 4px;
@@ -138,6 +141,7 @@ button:hover {
 }
 
 #timer-display {
+  font-family: 'Cursed Timer ULiL', sans-serif;
   font-size: 2.5rem;
   background-color: #111;
   color: #00ffcc;
@@ -194,7 +198,7 @@ button:hover {
   transition: all 0.2s ease;
   width: 100%;
   max-width: 410px; /* Match timer controls width */
-  box-sizing: border-box; /* Include padding in width */
+  box-sizing: border-box; 
   margin-top: 10px;
 }
 
@@ -206,7 +210,7 @@ button:hover {
 /* --- RESPONSIVE SECTION --- */
 @media (max-width: 768px) {
   body {
-    height: auto; /* Allow scrolling */
+    height: auto; /* Allow height to adjust on mobile */
     padding: 20px 0;
   }
 
